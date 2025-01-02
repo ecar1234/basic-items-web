@@ -1,0 +1,81 @@
+@import "./common.scss";
+
+header {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  z-index: 9;
+  border-bottom: 1px solid #e1e1e1;
+  > .inner {
+    @include inner;
+    height: 120px;
+    // background-color: red;
+  }
+  .nav-container{
+    display: flex;
+    justify-content: space-between;
+    .logo{
+      height: 120px;
+      width: 20%;
+      display: flex;
+      align-items: center;
+    }
+    .nav-wrap{
+      width: 80%;
+      // background-color: brown;
+      .sub-nav{
+        height: 50%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 10px;
+        > p {
+          margin-right: 20px;
+          cursor: pointer;
+          color: #999;
+          transition: color .3s ease;
+          font-weight: 600;
+          &:hover{
+            color: #333;
+          }
+        }
+        .search-container{
+          input{
+            height: 30px;
+            width: 150px;
+            border-width: 0 0 1px;
+            outline: none;
+            padding: 10px;
+            box-sizing: border-box;
+          }
+          > span{
+            margin-left: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+      .main-nav{
+        height: 50%;
+        // background-color: goldenrod;
+        >ul{
+          height: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          >li{
+            cursor: pointer;
+            color: #999;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: color .3s ease;
+            &:hover{
+              color: #333
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
+

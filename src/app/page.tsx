@@ -1,9 +1,16 @@
-import Image from "next/image";
+"use client";
+import "@/css/mainPage.css";
+import Footer from "./footer";
 
 const home = () => {
-return (
-  <div>hello world!!</div>
-);
-}
+  return (
+    <div id="main-container">
+      <div className="inner">
+        <div className="main-body">hello world!!</div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
-export default home
+export default home;

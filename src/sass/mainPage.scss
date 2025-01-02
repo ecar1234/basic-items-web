@@ -1,0 +1,14 @@
+
+@import "./common.scss";
+
+#main-container {
+    position: relative;
+    top: 120px;
+    padding: 20px;
+    > .inner{
+        @include inner
+    }
+    .main-body {
+        min-height: Calc(80vh - 120px);
+    }
+}
