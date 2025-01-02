@@ -47,10 +47,19 @@ header {
             outline: none;
             padding: 10px;
             box-sizing: border-box;
+            cursor: default;
+            &:focus{
+              border-bottom: 1px solid #333;
+            }
           }
           > span{
             margin-left: 5px;
             cursor: pointer;
+            color: #999;
+            transition: color .3s ease;
+            &:hover{
+              color: #333;
+            }
           }
         }
       }

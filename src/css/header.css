@@ -61,7 +61,7 @@ header {
   border-bottom: 1px solid #e1e1e1;
 }
 header > .inner {
-  width: 1200px;
+  width: 1380px;
   margin: 0 auto;
   position: relative;
   height: 120px;
@@ -103,10 +103,19 @@ header .nav-container .nav-wrap .sub-nav .search-container input {
   outline: none;
   padding: 10px;
   box-sizing: border-box;
+  cursor: default;
+}
+header .nav-container .nav-wrap .sub-nav .search-container input:focus {
+  border-bottom: 1px solid #333;
 }
 header .nav-container .nav-wrap .sub-nav .search-container > span {
   margin-left: 5px;
   cursor: pointer;
+  color: #999;
+  transition: color 0.3s ease;
+}
+header .nav-container .nav-wrap .sub-nav .search-container > span:hover {
+  color: #333;
 }
 header .nav-container .nav-wrap .main-nav {
   height: 50%;
