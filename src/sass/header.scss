@@ -29,6 +29,7 @@ header {
         justify-content: end;
         align-items: center;
         padding: 10px;
+        box-sizing: border-box;
         > p {
           margin-right: 20px;
           cursor: pointer;

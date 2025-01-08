@@ -3,6 +3,8 @@ import "@/css/header.css";
 import { useRef, useState } from "react";
 import SearchIcon from '@mui/icons-material/Search';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import Image from "next/image";
+import Link from "next/link";
 
 function Header() {
 
@@ -31,7 +33,7 @@ function Header() {
       <div className="inner">
         <div className="nav-container">
           <div className="logo">
-            <a href="/"><img src="/logo.png" alt="Logo" /></a>
+            <Link href="/"><Image src="/logo.png" alt="Logo" width={230} height={80}/></Link>
           </div>
           <div className="nav-wrap">
             <nav className="sub-nav">
