@@ -3,14 +3,19 @@ import "@/css/mainPage.css";
 import Footer from "./footer";
 import LoginModal from "@/components/modals/login_modal";
 import { JSX, useEffect, useState } from "react";
-import { item } from "@/domain/models/itemModel";
+import { Item } from "@/domain/models/itemModel";
 import Image from "next/image";
+import { MainUseCases } from "@/useCases/mainUse/mainUseCase";
 
 const Home = () => {
+  const useCase = MainUseCases();
+
   const [isLogin, setIsLogin] = useState<boolean>(false);
-  const [items, setItems] = useState<item[]>([]);
+  const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
+    // useCase.getItemsData();
+
     fetch("/mockUp/itemMockUp.json")
       .then((res) => res.json())
       .then((data) => setItems(data))

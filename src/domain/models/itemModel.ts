@@ -1,4 +1,4 @@
-export interface item {
+export interface Item {
   id: string;
   register: Date;
   category: number; // 1 t-shirt, 2 shirt, 3 pants
