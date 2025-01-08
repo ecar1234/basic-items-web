@@ -1,28 +1,69 @@
-
 @import "./common.scss";
+@import "./colors.scss";
 
 #main-container {
-    position: relative;
-    top: 120px;
-    padding: 20px;
-    > .inner{
-        @include inner
-    }
-    .main-body {
-        min-height: Calc(80vh - 120px);
-        display: grid;
-        grid-template-columns: repeat(4, minmax(20%, 1fr));
-        gap: 30px;
-        .item-container{
-            width: 280px;
-            height: 370px;
-            border: 1px solid #333;
-            cursor: pointer;
-            .item-img{
-                width: 100%;
-                height: 60%;
-                background-color: aquamarine;
-            }
+  position: relative;
+  top: 120px;
+  padding: 20px;
+  > .inner {
+    @include inner;
+  }
+  .main-body {
+    min-height: Calc(80vh - 120px);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    gap: 20px;
+    .item-container {
+      width: 420px;
+      height: 540px;
+      border: 1px solid #333;
+      cursor: pointer;
+      .item-img {
+        width: 100%;
+        height: 70%;
+        background-color: aquamarine;
+      }
+      .item-info_container {
+        width: 100%;
+        height: 30%;
+        padding: 10px;
+        box-sizing: border-box;
+        // background-color: rosybrown;
+        .item-info_title {
+          > p {
+            line-height: 1.5;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9em;
+          }
+          .item_description {
+            color: #777;
+            font-weight: 400;
+            font-size: 0.9em;
+          }
         }
+        .divider{
+          border-top: 1px solid #666;
+        }
+        .price{
+          > p{
+            font-size: 0.9em;
+            color: #333;
+          }
+        }
+        .item-colors{
+          display: flex;
+          justify-content: end;
+          > span{
+            height: 10px;
+            width: 10px;
+            border: 1px solid #333;
+            border-radius: 10%;
+            margin-left: 5px;
+          }
+          @include colors;
+        }
+      }
     }
+  }
 }

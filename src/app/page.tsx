@@ -20,34 +20,59 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((e) => console.log(e));
-      console.log(items)
-  }, [items]);
+    console.log(items);
+  }, []);
 
   useEffect(() => {
     setIsLogin(false);
-  },[])
+  }, []);
 
   const ItemBuilder = (): JSX.Element => {
     return (
       <>
         {items.map((item) => (
           <div key={item.id} className="item-container">
-            <div className="item-img">
-              {ItemImgBuild(item.images)}
+            <div className="item-img">{ItemImgBuild(item.images)}</div>
+            <div className="item-info_container">
+            {ItemColorBuild(item.colors)}
+              <div className="item-info_title">
+                <p className="item_title">{item.title}</p>
+                <p className="item_description">{item.description}</p>
+              </div>
+              <hr className="divider"></hr>
+              <div className="price">
+                <p>{item.price}원</p>
+              </div>
+              
             </div>
           </div>
         ))}
       </>
     );
   };
-  const ItemImgBuild = (path:string[]):JSX.Element =>{
-    if(path.length === 0){
-      return <><p>no image</p></>
-    }else{
-      return <Image src={`${path[0]}`} alt=""/>
+  const ItemImgBuild = (path: string[]): JSX.Element => {
+    if (path.length === 0) {
+      return (
+        <>
+          <p>no image</p>
+        </>
+      );
+    } else {
+      return <Image src={`${path[0]}`} alt="" />;
     }
+  };
+  const ItemColorBuild = (colors: string[]):JSX.Element => {
+    if(colors.length === 0){
+      return <div className="cfff"></div>
+    }
+    return (
+      <div className="item-colors">
+        {colors.map((color,i) => {
+          return <span key={i} className={`${color}`}></span>
+        })}
+      </div>
+    )
   }
-
 
   return (
     <>

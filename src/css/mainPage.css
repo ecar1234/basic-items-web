@@ -1,17 +1,85 @@
 /* reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   font-size: 100%;
@@ -20,8 +88,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -30,16 +107,20 @@ body {
   /* height: 5000px; */
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -51,6 +132,62 @@ table {
 
 a {
   text-decoration: none;
+}
+
+.c333 {
+  background-color: #333;
+}
+
+.cfe2e2e {
+  background-color: #fe2e2e;
+}
+
+.cfe642e {
+  background-color: #fe642e;
+}
+
+.cffff00 {
+  background-color: #ffff00;
+}
+
+.c01df01 {
+  background-color: #01df01;
+}
+
+.c0040ff {
+  background-color: #0040ff;
+}
+
+.c642efe {
+  background-color: #642efe;
+}
+
+.c333 {
+  background-color: #333;
+}
+
+.cfe2e2e {
+  background-color: #fe2e2e;
+}
+
+.cfe642e {
+  background-color: #fe642e;
+}
+
+.cffff00 {
+  background-color: #ffff00;
+}
+
+.c01df01 {
+  background-color: #01df01;
+}
+
+.c0040ff {
+  background-color: #0040ff;
+}
+
+.c642efe {
+  background-color: #642efe;
 }
 
 #main-container {
@@ -66,17 +203,55 @@ a {
 #main-container .main-body {
   min-height: calc(80vh - 120px);
   display: grid;
-  grid-template-columns: repeat(4, minmax(20%, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  gap: 20px;
 }
 #main-container .main-body .item-container {
-  width: 280px;
-  height: 370px;
+  width: 420px;
+  height: 540px;
   border: 1px solid #333;
   cursor: pointer;
 }
 #main-container .main-body .item-container .item-img {
   width: 100%;
-  height: 60%;
+  height: 70%;
   background-color: aquamarine;
+}
+#main-container .main-body .item-container .item-info_container {
+  width: 100%;
+  height: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#main-container .main-body .item-container .item-info_container .item-info_title > p {
+  line-height: 1.5;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9em;
+}
+#main-container .main-body .item-container .item-info_container .item-info_title .item_description {
+  color: #777;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+#main-container .main-body .item-container .item-info_container .divider {
+  border-top: 1px solid #666;
+}
+#main-container .main-body .item-container .item-info_container .price > p {
+  font-size: 0.9em;
+  color: #333;
+}
+#main-container .main-body .item-container .item-info_container .item-colors {
+  display: flex;
+  justify-content: end;
+}
+#main-container .main-body .item-container .item-info_container .item-colors > span {
+  height: 10px;
+  width: 10px;
+  border: 1px solid #333;
+  border-radius: 10%;
+  margin-left: 5px;
+}
+#main-container .main-body .item-container .item-info_container .item-colors .cfff {
+  background-color: #fff;
 }
