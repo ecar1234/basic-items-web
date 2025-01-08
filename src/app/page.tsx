@@ -5,10 +5,11 @@ import LoginModal from "@/components/modals/login_modal";
 import { JSX, useEffect, useState } from "react";
 import { Item } from "@/domain/models/itemModel";
 import Image from "next/image";
-import { MainUseCases } from "@/useCases/mainUse/mainUseCase";
+import { MathUtils } from "@/utils/mathUtil";
+// import { MainUseCases } from "@/useCases/mainUse/mainUseCase";
 
 const Home = () => {
-  const useCase = MainUseCases();
+  // const useCase = MainUseCases();
 
   const [isLogin, setIsLogin] = useState<boolean>(false);
   const [items, setItems] = useState<Item[]>([]);
@@ -21,7 +22,7 @@ const Home = () => {
       .then((data) => setItems(data))
       .catch((e) => console.log(e));
     console.log(items);
-  }, []);
+  });
 
   useEffect(() => {
     setIsLogin(false);
@@ -41,7 +42,8 @@ const Home = () => {
               </div>
               <hr className="divider"></hr>
               <div className="price">
-                <p>{item.price}원</p>
+                {item.sale != null ? <span><p>{MathUtils.addComma(item.sale)}원</p></span> : null}
+                <p>{MathUtils.addComma(item.price)}원</p>
               </div>
               
             </div>
@@ -50,6 +52,7 @@ const Home = () => {
       </>
     );
   };
+
   const ItemImgBuild = (path: string[]): JSX.Element => {
     if (path.length === 0) {
       return (
@@ -58,9 +61,10 @@ const Home = () => {
         </>
       );
     } else {
-      return <Image src={`${path[0]}`} alt="" />;
+      return <Image src={`${path[0]}`} alt="" fill />;
     }
   };
+
   const ItemColorBuild = (colors: string[]):JSX.Element => {
     if(colors.length === 0){
       return <div className="cfff"></div>
