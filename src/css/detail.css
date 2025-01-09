@@ -82,11 +82,11 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  // border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -101,18 +101,22 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
   /* height: 5000px; */
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -120,17 +124,30 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 a {
   text-decoration: none;
 }
 
-@mixin inner {
+#detail-main-container {
+  position: relative;
+  top: 120px;
+  padding: 20px;
+  background-color: bisque;
+}
+#detail-main-container > .inner {
+  position: relative;
   width: 80vw;
   margin: 0 auto;
   position: relative;
+  background-color: aquamarine;
 }
-
+#detail-main-container .item-info_wrap {
+  min-height: calc(80vh - 120px);
+  background-color: brown;
+}

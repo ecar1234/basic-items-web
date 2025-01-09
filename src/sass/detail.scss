@@ -1,0 +1,17 @@
+@import "./common.scss";
+
+#detail-main-container{
+  position: relative;
+  top: 120px;
+  padding: 20px;
+  background-color: bisque;
+  > .inner{
+    position: relative;
+    @include inner;
+    background-color: aquamarine;
+  }
+  .item-info_wrap{
+    min-height: calc(80vh - 120px);
+    background-color: brown;
+  }
+}

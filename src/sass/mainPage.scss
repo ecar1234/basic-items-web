@@ -17,15 +17,15 @@
     .item-container {
       width: 360px;
       height: 540px;
-    //   border: 1px solid #333;
+      //   border: 1px solid #333;
       cursor: pointer;
       .item-img {
         position: relative;
         width: 100%;
         height: 70%;
-        > Image{
-            position: relative;
-            object-fit:fill;
+        > Image {
+          position: relative;
+          object-fit: fill;
         }
         // background-color: aquamarine;
       }
@@ -48,26 +48,27 @@
             font-size: 0.9rem;
           }
         }
-        .divider{
-          border-top: 1px solid #666;
+        .divider {
+          border-top: 1px solid #999;
+          margin: 8px 0;
         }
-        .price{
-            span{
-                p{
-                    text-decoration: line-through;
-                    font-size: .9rem;
-                    color: #888;
-                }
+        .price {
+          span {
+            p {
+              text-decoration: line-through;
+              font-size: 0.9rem;
+              color: #888;
             }
-          > p{
+          }
+          > p {
             font-size: 0.9em;
-            color: #333;
+            color: #444;
           }
         }
-        .item-colors{
+        .item-colors {
           display: flex;
           justify-content: end;
-          > span{
+          > span {
             height: 10px;
             width: 10px;
             border: 1px solid #333;

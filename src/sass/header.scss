@@ -12,9 +12,11 @@ header {
     // background-color: red;
   }
   .nav-container{
+    position: relative;
     display: flex;
     justify-content: space-between;
     .logo{
+      position: relative;
       height: 120px;
       width: 20%;
       display: flex;

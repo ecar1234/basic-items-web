@@ -184,7 +184,8 @@ a {
   font-size: 0.9rem;
 }
 #main-container .main-body .item-container .item-info_container .divider {
-  border-top: 1px solid #666;
+  border-top: 1px solid #999;
+  margin: 8px 0;
 }
 #main-container .main-body .item-container .item-info_container .price span p {
   text-decoration: line-through;
@@ -193,7 +194,7 @@ a {
 }
 #main-container .main-body .item-container .item-info_container .price > p {
   font-size: 0.9em;
-  color: #333;
+  color: #444;
 }
 #main-container .main-body .item-container .item-info_container .item-colors {
   display: flex;

@@ -106,7 +106,7 @@
     "register":"2024-12-01",
     "category":"1",
     "title":"20수 화이트 면 티셔츠",
-    "images":["/mockImg/231336819_02.png"],
+    "images":["/mockImg/231336819_02.jpg"],
     "price":"8800",
     "sale":null,
     "description":"고품직 20수 면티셔츠",
@@ -117,11 +117,11 @@
     "register":"2024-12-01",
     "category":"1",
     "title":"20수 화이트 면 티셔츠",
-    "images":["/mockImg/231336819.png"],
+    "images":["/mockImg/231336819.jpg"],
     "price":"8800",
     "sale":null,
     "description":"고품직 20수 면티셔츠",
     "colors": ["cfff", "c333","c0040ff"],
     "quantity":null
   }
-]
+] 

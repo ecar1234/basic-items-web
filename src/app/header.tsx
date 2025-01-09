@@ -13,7 +13,7 @@ function Header() {
   const searchInput = useRef(null);
 
   function checkLogin(e:React.MouseEvent<HTMLElement, MouseEvent>):void{
-    e.preventDefault;
+    e.preventDefault();
     if(isLogin){
       setIsLogin(false);
     }else{
@@ -25,6 +25,7 @@ function Header() {
     console.log(e.target.value);
   }
   function searchOnclick(e:React.MouseEvent<HTMLElement, MouseEvent>):void{
+    e.preventDefault();
     console.log("search on click!")
   }
 
@@ -33,7 +34,7 @@ function Header() {
       <div className="inner">
         <div className="nav-container">
           <div className="logo">
-            <Link href="/"><Image src="/logo.png" alt="Logo" width={230} height={80}/></Link>
+            <Link href="/"><Image src="/logo.png" alt="Logo" fill /></Link>
           </div>
           <div className="nav-wrap">
             <nav className="sub-nav">

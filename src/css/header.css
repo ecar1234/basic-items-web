@@ -142,16 +142,18 @@ header {
   border-bottom: 1px solid #e1e1e1;
 }
 header > .inner {
-  width: 1380px;
+  width: 80vw;
   margin: 0 auto;
   position: relative;
   height: 120px;
 }
 header .nav-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
 header .nav-container .logo {
+  position: relative;
   height: 120px;
   width: 20%;
   display: flex;
