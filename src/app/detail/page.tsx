@@ -2,15 +2,30 @@
 
 import "@/css/detail.css";
 import { Item } from "@/domain/models/itemModel";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 function DetailPage() {
+  const searchParams = useSearchParams();
+
 	const [item, setItem] = useState<Item>(null);
 	
 	useEffect(() => {
-		
+		GetItemData();
 	},[]);
 
+  async function GetItemData():Promise<void>{
+    const data:Response = await fetch("/mockUp/itemMockUp.json");
+    if(!data.ok){
+      throw new Error(`HTTP error! status: ${data.status}`);
+    }
+    const list:Item[] = await data.json();
+    const item:Item = list.find(e => e.id === searchParams.get('id'));
+
+    setItem(item);
+
+    console.log(item);
+  }
   return (
     <>
       <main id="detail-main-container">
