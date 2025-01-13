@@ -2,7 +2,7 @@
 import "@/css/mainPage.css";
 import Footer from "../components/footer";
 import LoginModal from "@/components/modals/login_modal";
-import { JSX, useEffect, useState } from "react";
+import { JSX, Suspense, useEffect, useState } from "react";
 import { Item } from "@/domain/models/itemModel";
 import Image from "next/image";
 import { MathUtils } from "@/utils/mathUtil";
@@ -17,21 +17,29 @@ const Home = () => {
 
   useEffect(() => {
     // useCase.getItemsData();
-
-    fetch("/mockUp/itemMockUp.json")
-      .then((res) => res.json())
-      .then((data) => setItems(data))
-      .catch((e) => console.log(e));
-    console.log(items);
+    async function getItemList():Promise<void> {
+      const res:Response = await fetch("/mockUp/itemMockUp.json");
+      if (!res.ok) {
+        throw new Error("Failed to fetch data");
+      }
+      const list:Item[] = await res.json();
+      setItems(list);
+      console.log(items);
+    }
+    getItemList();
   },[]);
 
   useEffect(() => {
     setIsLogin(false);
   }, []);
 
+  
+  function Loading() {
+    return <h2>🌀 Loading...</h2>;
+  }
   const ItemBuilder = (): JSX.Element => {
     return (
-      <>
+      <Suspense fallback={<Loading />}>
         {items.map((item) => (
           <Link
             key={item.id}
@@ -59,7 +67,7 @@ const Home = () => {
             </div>
           </Link>
         ))}
-      </>
+      </Suspense>
     );
   };
 

@@ -9,6 +9,7 @@ header {
   > .inner {
     @include inner;
     height: 120px;
+    position: relative;
     // background-color: red;
   }
   .nav-container{

@@ -140,7 +140,7 @@ a {
   padding: 20px;
 }
 #main-container > .inner {
-  width: 1380px;
+  width: 80vw;
   margin: 0 auto;
   position: relative;
 }
@@ -163,8 +163,7 @@ a {
 }
 #main-container .main-body .item-container .item-img > Image {
   position: relative;
-  -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
 }
 #main-container .main-body .item-container .item-info_container {
   width: 100%;

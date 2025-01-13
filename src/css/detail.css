@@ -148,6 +148,30 @@ a {
   background-color: aquamarine;
 }
 #detail-main-container .item-info_wrap {
+  position: relative;
   min-height: calc(80vh - 120px);
+  display: flex;
+  justify-content: space-around;
   background-color: brown;
+}
+#detail-main-container .item-info_wrap .item-img_container {
+  position: relative;
+  width: 650px;
+  height: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: aliceblue;
+}
+#detail-main-container .item-info_wrap .item-img_container > img {
+  object-fit: cover;
+}
+#detail-main-container .item-info_wrap .item-purchase_container {
+  width: 750px;
+  height: 700px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: aliceblue;
+}
+#detail-main-container .item-info_wrap .item-purchase_container .divider {
+  border-top: 1px solid #333;
 }

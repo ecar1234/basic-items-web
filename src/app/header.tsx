@@ -34,7 +34,7 @@ function Header() {
       <div className="inner">
         <div className="nav-container">
           <div className="logo">
-            <Link href="/"><Image src="/logo.png" alt="Logo" fill /></Link>
+            <Link href="/"><Image src="/logo.png" alt="Logo" fill priority /></Link>
           </div>
           <div className="nav-wrap">
             <nav className="sub-nav">

@@ -146,6 +146,7 @@ header > .inner {
   margin: 0 auto;
   position: relative;
   height: 120px;
+  position: relative;
 }
 header .nav-container {
   position: relative;

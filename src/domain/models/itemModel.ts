@@ -3,10 +3,11 @@ export interface Item {
   register: Date;
   category: number; // 1 t-shirt, 2 shirt, 3 pants
   title: string;
-  images: string[]
+  images: string[];
   price: number;
   sale?: number;
+  size: string[];
   description: string;
   colors: string[];
-  quantity?: number
+  quantity?: number;
 }

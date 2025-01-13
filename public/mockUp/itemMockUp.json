@@ -8,6 +8,7 @@
     "images":["/mockImg/231231944_01.png"],
     "price":"8800",
     "sale":"12000",
+    "size":["free size", "M", "L", "XL", "2XL"],
     "description":"고 퀄리티 맨투맨",
     "colors": ["cfe2e2e", "c01df01", "cfe642e", "c01df01"],
     "quantity":null
@@ -20,6 +21,7 @@
     "images":["/mockImg/231231944_02.png"],
     "price":"8800",
     "sale":null,
+    "size":["free size", "M", "L", "XL", "2XL"],
     "description":"고품직 20수 면티셔츠",
     "colors": ["c01df01", "cfe2e2e"],
     "quantity":null
@@ -32,6 +34,7 @@
     "images":["/mockImg/231231944_03.png"],
     "price":"8800",
     "sale":null,
+    "size":["free size", "M", "L", "XL", "2XL"],
     "description":"고품직 20수 면티셔츠",
     "colors": ["c01df01", "c333"],
     "quantity":null
@@ -43,6 +46,7 @@
     "images":["/mockImg/231231944_04.png"],
     "price":"8800",
     "sale":null,
+    "size":["free size", "M", "L", "XL", "2XL"],
     "description":"고품직 20수 면티셔츠",
     "colors": ["cfe2e2e", "c333"],
     "quantity":null
@@ -54,6 +58,7 @@
     "images":["/mockImg/231231944_05.png"],
     "price":"8800",
     "sale":null,
+    "size":["free size", "M", "L", "XL", "2XL"],
     "description":"고품직 20수 면티셔츠",
     "colors": ["c0040ff", "c333"],
     "quantity":null
@@ -65,6 +70,7 @@
     "images":["/mockImg/231231944_06.png"],
     "price":"8800",
     "sale":null,
+    "size":["free size", "M", "L", "XL", "2XL"],
     "description":"고품직 20수 면티셔츠",
     "colors": ["c0040ff", "c333"],
     "quantity":null
@@ -76,6 +82,7 @@
     "images":["/mockImg/231231944_07.png"],
     "price":"8800",
     "sale":null,
+    "size":["free size", "M", "L", "XL", "2XL"],
     "description":"고품직 20수 면티셔츠",
     "colors": ["cfff", "c333"],
     "quantity":null
@@ -87,6 +94,7 @@
     "images":["/mockImg/231231944.png"],
     "price":"8800",
     "sale":null,
+    "size":["free size", "M", "L", "XL", "2XL"],
     "description":"고품직 20수 면티셔츠",
     "colors": ["cfff", "c333"],
     "quantity":null
@@ -98,6 +106,7 @@
     "images":["/mockImg/231336819_01.jpg"],
     "price":"8800",
     "sale":null,
+    "size":["free size", "M", "L", "XL", "2XL"],
     "description":"고품직 20수 면티셔츠",
     "colors": ["cfe642e", "c333"],
     "quantity":null
@@ -109,6 +118,7 @@
     "images":["/mockImg/231336819_02.jpg"],
     "price":"8800",
     "sale":null,
+    "size":["free size", "M", "L", "XL", "2XL"],
     "description":"고품직 20수 면티셔츠",
     "colors": ["cfff", "cfe642e"],
     "quantity":null
@@ -120,6 +130,7 @@
     "images":["/mockImg/231336819.jpg"],
     "price":"8800",
     "sale":null,
+    "size":["free size", "M", "L", "XL", "2XL"],
     "description":"고품직 20수 면티셔츠",
     "colors": ["cfff", "c333","c0040ff"],
     "quantity":null
