@@ -6,7 +6,7 @@ import { ColorCheck } from "@/utils/color_check";
 import { MathUtils } from "@/utils/mathUtil";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { JSX, Suspense, useEffect, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 
 interface SelectItem {
   color: string;
@@ -74,7 +74,7 @@ function DetailPage(): JSX.Element {
     return (
       <>
         {item.colors.map((code, i) => {
-          let color = ColorCheck.CodeToString(code);
+          const color = ColorCheck.CodeToString(code);
           return (
             <span key={i} className={color}>
               <button>{color}</button>
@@ -124,6 +124,3 @@ function DetailPage(): JSX.Element {
 }
 
 export default DetailPage;
-function itemPurchaseStore(arg0: (state: any) => any) {
-  throw new Error("Function not implemented.");
-}
