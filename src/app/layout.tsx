@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body className={`${robotoMono.className} ${notoSansKr.className} antialiased`}>
         <Header />
         {children}

@@ -1,16 +1,16 @@
 @import "./common.scss";
 
-#detail-main-container{
+#detail-main-container {
   position: relative;
   top: 120px;
   padding: 20px;
   background-color: bisque;
-  > .inner{
+  > .inner {
     position: relative;
     @include inner;
     background-color: aquamarine;
   }
-  .item-info_wrap{
+  .item-info_wrap {
     position: relative;
     min-height: calc(80vh - 120px);
     display: flex;
@@ -23,15 +23,34 @@
       padding: 20px;
       box-sizing: border-box;
       background-color: aliceblue;
-      > img{object-fit: cover;}
+      > img {
+        object-fit: cover;
+      }
     }
-    .item-purchase_container{
+    .item-purchase_container {
       width: 750px;
       height: 700px;
       padding: 20px;
       box-sizing: border-box;
       background-color: aliceblue;
-      .divider{border-top: 1px solid #333;}
+      .divider {
+        border-top: 1px solid #333;
+      }
+      .item-price {
+        
+      }
+      .item-sizes{
+        span{
+          &:first-child{
+            button{
+              margin-left: 0;
+            }
+          }
+          button{
+            margin-left: 10px;
+          }
+        }
+      }
     }
   }
 }

@@ -133,3 +133,7 @@ table {
 a {
   text-decoration: none;
 }
+
+.divider {
+  border-top: 1px solid #333;
+}

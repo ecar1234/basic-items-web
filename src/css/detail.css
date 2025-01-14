@@ -134,6 +134,10 @@ a {
   text-decoration: none;
 }
 
+.divider {
+  border-top: 1px solid #333;
+}
+
 #detail-main-container {
   position: relative;
   top: 120px;
@@ -174,4 +178,10 @@ a {
 }
 #detail-main-container .item-info_wrap .item-purchase_container .divider {
   border-top: 1px solid #333;
+}
+#detail-main-container .item-info_wrap .item-purchase_container .item-sizes span:first-child button {
+  margin-left: 0;
+}
+#detail-main-container .item-info_wrap .item-purchase_container .item-sizes span button {
+  margin-left: 10px;
 }

@@ -2,15 +2,28 @@
 
 import "@/css/detail.css";
 import { Item } from "@/domain/models/itemModel";
+import { ColorCheck } from "@/utils/color_check";
 import { MathUtils } from "@/utils/mathUtil";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { JSX, Suspense, useEffect, useState } from "react";
 
+interface SelectItem {
+  color: string;
+  size: string;
+  price: number;
+  qty: number;
+}
+
 function DetailPage(): JSX.Element {
   const searchParams = useSearchParams();
 
   const [item, setItem] = useState<Item>(null);
+
+  //user selected item var.
+  const [selectedColor, setColor] = useState<string>("");
+  const [selectedSize, setSize] = useState<string>("");
+  const [selectedItems, setSelectedItems] = useState<SelectItem[]>([]);
 
   useEffect(() => {
     const itemId: string | null = searchParams.get("id");
@@ -26,47 +39,53 @@ function DetailPage(): JSX.Element {
           throw new Error(`HTTP Error: ${res.status}`);
         }
         const list: Item[] = await res.json();
-        console.log(list);
         const itemData: Item = list.find((item) => item.id === itemId);
-        if (itemData != null) {
-          setItem(itemData);
-        } else {
-          const item: Item = {
-            id: "0",
-            register: new Date(),
-            category: 1,
-            title: "기모 베이직 맨투맨",
-            images: ["/mockImg/231231944_01.png"],
-            price: 8800,
-            sale: 12000,
-            size: ["free size", "M", "L", "XL", "2XL"],
-            description: "고 퀄리티 맨투맨",
-            colors: ["cfe2e2e", "c01df01", "cfe642e", "c01df01"],
-            quantity: null,
-          };
-          setItem(item);
-        }
+        setItem(itemData);
       } catch (e) {}
-
-      console.log(item);
     }
     GetItemData();
-    console.log(item);
   }, []);
+  useEffect(() => {}, [item]);
+  // feature
+  function SelectSize(e: React.MouseEvent<HTMLButtonElement, MouseEvent>, size: string): void {
+    e.preventDefault();
+    setSize(size);
+  }
 
+  // UI
   const BuildSize = (): JSX.Element => {
-    if (item.size.length > 1) {
-      item.size.map((s) => {
-        return <div className="size">{s}</div>;
-      });
-    } else if (item.size.length >= 1) {
-      return <div className="size">Free Size</div>;
-    } else {
-      return <></>;
-    }
+    return (
+      <>
+        {item.size.map((s, i) => {
+          return (
+            <span key={i}>
+              <button
+                onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => SelectSize(e, s)}
+              >
+                {s}
+              </button>
+            </span>
+          );
+        })}
+      </>
+    );
+  };
+  const BuildColor = (): JSX.Element => {
+    return (
+      <>
+        {item.colors.map((code, i) => {
+          let color = ColorCheck.CodeToString(code);
+          return (
+            <span key={i} className={color}>
+              <button>{color}</button>
+            </span>
+          );
+        })}
+      </>
+    );
   };
 
-  if(!item){
+  if (!item) {
     return <h2>🌀 Loading...</h2>;
   }
 
@@ -80,7 +99,7 @@ function DetailPage(): JSX.Element {
                 <button className="prev"></button>
                 <button className="next"></button>
               </div>
-             <Image src={`${item.images[0]}`} alt="" fill />
+              <Image src={`${item.images[0]}`} alt="" fill />
             </div>
             <div className="item-purchase_container">
               <div className="item-title">
@@ -92,6 +111,8 @@ function DetailPage(): JSX.Element {
                 <span>{MathUtils.addComma(item.price)}원</span>
               </div>
               <div className="item-sizes">{BuildSize()}</div>
+              <div className="item-sizes">{BuildColor()}</div>
+              <div className="divider"></div>
             </div>
           </div>
           <div className="detail-section"></div>
@@ -103,3 +124,6 @@ function DetailPage(): JSX.Element {
 }
 
 export default DetailPage;
+function itemPurchaseStore(arg0: (state: any) => any) {
+  throw new Error("Function not implemented.");
+}
